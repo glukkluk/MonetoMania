@@ -23,7 +23,10 @@ class Game:
     def next_turn(self):
         self.current_turn["turn_count"] += 1
 
-        self.current_turn["attacker"].select_target()
+        self.current_turn["attacker"].select_target(
+            input("Enter the name of the target: ")
+        )
+        self.current_turn["attacker"].place_a_bet(input("Enter your bet: "))
 
     def start_game(self):
         self.controller.table.distribute_chips()
