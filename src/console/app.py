@@ -3,17 +3,17 @@ from textual.containers import Grid
 from textual.widgets import Header, Footer
 
 
-from widgets import UserInventoryWidget, SidebarWidget, GameScreenWidget
+from widgets import UserInventoryWidget, SidebarWidget, GameScreenWidget, InputWidget
 
 
 class Terminal(Grid):
     DEFAULT_CSS = """
     Terminal {
-        height: 40;
+        height: 45;
         width: 90;
 
-        grid-size: 2 2;
-        grid-rows: 3fr 1fr;
+        grid-size: 2 3;
+        grid-rows: 3fr 1fr 0.25fr;
         grid-columns: 1fr 3fr;
     }
     """
@@ -36,3 +36,5 @@ class MonetoManiaApp(App):
 
             # Container with the user info (number of chips, and current cards)
             yield UserInventoryWidget()
+
+            yield InputWidget()

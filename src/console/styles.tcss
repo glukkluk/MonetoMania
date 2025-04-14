@@ -20,6 +20,11 @@ UserInventoryWidget > * {
     height: 100%;
 }
 
+InputWidget {
+    border: wide white;
+    column-span: 2;
+}
+
 .user-chips {
     align: center middle;
     border: none;
