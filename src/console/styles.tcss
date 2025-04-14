@@ -1,0 +1,30 @@
+Screen {
+    align: center middle;
+}
+
+SidebarWidget {
+    border: solid purple;
+}
+
+GameScreenWidget {
+    border: solid red;
+}
+
+UserInventoryWidget {
+    border: solid cyan;
+    column-span: 2;
+}
+
+UserInventoryWidget > * {
+    border: dashed green;
+    height: 100%;
+}
+
+.user-chips {
+    align: center middle;
+    border: none;
+}
+
+.user-chips * {
+    width: auto;
+}
