@@ -29,12 +29,12 @@ class MonetoManiaApp(App):
             yield Footer()
 
             # Sidebar with list of players
-            yield SidebarWidget()
+            yield SidebarWidget(num_players=5)
 
             #  Container with the game process
             yield GameScreenWidget()
 
             # Container with the user info (number of chips, and current cards)
-            yield UserInventoryWidget()
+            yield UserInventoryWidget(num_cards=6)
 
             yield InputWidget()

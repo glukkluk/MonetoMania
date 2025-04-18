@@ -1,9 +1,22 @@
 Screen {
     align: center middle;
+    hatch: "#" white 15%;
 }
 
 SidebarWidget {
     border: solid purple;
+}
+
+SidebarWidget RadioSet {
+    background: $background;
+    border: none;
+}
+
+SidebarWidget RadioButton {
+    border: dashed yellow;
+
+    height: auto;
+    width: auto;
 }
 
 GameScreenWidget {
@@ -11,6 +24,9 @@ GameScreenWidget {
 }
 
 UserInventoryWidget {
+    grid-size: 7;
+    grid-rows: 1fr;
+
     border: solid cyan;
     column-span: 2;
 }
@@ -32,4 +48,8 @@ InputWidget {
 
 .user-chips * {
     width: auto;
+}
+
+.empty {
+    hatch: right white 30%;
 }

@@ -1,10 +1,15 @@
-from textual.containers import Container, Horizontal, Center
-from textual.widgets import Digits, Label
+from textual.containers import Container, Grid, Center
+from textual.widgets import Digits
 
 
-class UserInventoryWidget(Horizontal):
+class UserInventoryWidget(Grid):
+    def __init__(self, num_cards: int):
+        super().__init__()
+
+        self.num_cards: int = num_cards
+
     def compose(self):
         yield Center(Digits("100"), classes="user-chips")
 
-        for i in range(6):
-            yield Container(Label(f"Card: {i}", classes=f"user-card{i + 1}"))
+        for _ in range(self.num_cards):
+            yield Container(classes="empty")
