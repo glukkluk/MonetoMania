@@ -10,7 +10,7 @@ class Terminal(Grid):
     DEFAULT_CSS = """
     Terminal {
         height: 45;
-        width: 90;
+        width: 100;
 
         grid-size: 2 3;
         grid-rows: 3fr 1fr 0.25fr;

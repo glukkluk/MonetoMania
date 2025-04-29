@@ -49,8 +49,54 @@ CurrentGameState * {
 }
 
 GameProcess {
-    border: dashed green;
+    border: solid orange;
     margin: 0 2 1 2;
+}
+
+#table-info {
+    grid-size: 2;
+    grid-columns: 3fr 1fr;
+}
+
+#bet-container {
+    align: center middle;
+}
+
+#bet-container Horizontal {
+    border: solid white;
+
+    width: auto;
+    height: auto;
+}
+
+#table-info Horizontal * {
+    margin: 0 5;
+}
+
+.commission-container {
+    grid-size: 1;
+    grid-rows: 1fr;
+}
+
+.commission-container Container {
+    border: solid white;
+
+    padding: 0 3;
+
+    width: auto;
+    height: auto;
+}
+
+#table-cards {
+    padding: 0 3;
+
+    grid-size: 3;
+    grid-columns: 1fr;
+}
+
+#table-cards Container {
+    border: dashed green;
+    margin: 0 2;
 }
 
 UserInventoryWidget {
@@ -64,6 +110,8 @@ UserInventoryWidget {
 UserInventoryWidget > * {
     border: dashed green;
     height: 100%;
+
+    margin: 0 1;
 }
 
 InputWidget {
