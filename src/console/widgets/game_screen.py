@@ -1,4 +1,4 @@
-from textual.widgets import Label, Digits, ProgressBar
+from textual.widgets import Label, Digits, ProgressBar, Rule
 from textual.containers import Container, Vertical, Horizontal, Grid, Center
 
 
@@ -24,9 +24,10 @@ class GameProcess(Vertical):
                     yield Label("-:-")
                     yield Label("20", id="defender-bet")
 
-            with Grid(classes="commission-container"):
-                yield Container(Label("3"), classes="commission-your")
-                yield Container(Label("21"), classes="commission-all")
+            with Vertical(classes="commission-container"):
+                yield Center(Label("3"))
+                yield Rule()
+                yield Center(Label("21"))
 
         def on_mount(self):
             self.id = "table-info"

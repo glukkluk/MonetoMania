@@ -74,17 +74,17 @@ GameProcess {
 }
 
 .commission-container {
-    grid-size: 1;
-    grid-rows: 1fr;
-}
-
-.commission-container Container {
     border: solid white;
 
-    padding: 0 3;
+    margin: 1 5 1 0;
+}
 
-    width: auto;
-    height: auto;
+.commission-container Center {
+    align-vertical: middle;
+}
+
+.commission-container Rule {
+    color: white;
 }
 
 #table-cards {
