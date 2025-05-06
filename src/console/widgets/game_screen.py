@@ -15,8 +15,8 @@ class CurrentGameState(Grid):
         yield self.Countdown()
 
 
-class GameProcess(Vertical):
-    class TableInfo(Grid):
+class Table(Vertical):
+    class Info(Grid):
         def compose(self):
             with Container(id="bet-container"):
                 with Horizontal():
@@ -32,7 +32,7 @@ class GameProcess(Vertical):
         def on_mount(self):
             self.id = "table-info"
 
-    class TableCards(Grid):
+    class Cards(Grid):
         def compose(self):
             for _ in range(3):
                 yield Center(Container(classes="empty"))
@@ -41,12 +41,12 @@ class GameProcess(Vertical):
             self.id = "table-cards"
 
     def compose(self):
-        yield self.TableInfo()
+        yield self.Info()
 
-        yield self.TableCards()
+        yield self.Cards()
 
 
 class GameScreenWidget(Grid):
     def compose(self):
         yield CurrentGameState()
-        yield GameProcess()
+        yield Table()

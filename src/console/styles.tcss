@@ -48,7 +48,7 @@ CurrentGameState * {
     width: 100%;
 }
 
-GameProcess {
+Table {
     border: solid orange;
     margin: 0 2 1 2;
 }
