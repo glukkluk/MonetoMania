@@ -1,17 +1,19 @@
 from textual.app import ComposeResult
 from textual.screen import Screen
-from textual.containers import Grid
 from textual.widgets import Header, Footer
 
-from widgets import UserInventoryWidget, SidebarWidget, GameScreenWidget, InputWidget
+from widgets import (
+    BaseTerminal,
+    UserInventoryWidget,
+    SidebarWidget,
+    GameScreenWidget,
+    InputWidget,
+)
 
 
-class Terminal(Grid):
+class Terminal(BaseTerminal):
     DEFAULT_CSS = """
     Terminal {
-        height: 45;
-        width: 100;
-
         grid-size: 2 3;
         grid-rows: 3fr 1fr 0.25fr;
         grid-columns: 1fr 3fr;
