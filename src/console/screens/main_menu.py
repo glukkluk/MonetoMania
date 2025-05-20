@@ -7,7 +7,7 @@ from widgets import (
     BaseTerminal,
     GameLogoWidget,
     CreateGameButton,
-    JoinToGameButton,
+    JoinTheGameButton,
     RulesButton,
     SettingsButton,
     AboutWidget,
@@ -31,7 +31,7 @@ class MainMenuScreen(Screen):
             yield Center(GameLogoWidget())
 
             yield Center(CreateGameButton())
-            yield Center(JoinToGameButton())
+            yield Center(JoinTheGameButton())
             yield Center(RulesButton())
             yield Center(SettingsButton())
 

@@ -3,7 +3,7 @@ from .terminal import BaseTerminal
 from .main_menu.game_logo import GameLogoWidget
 from .main_menu.buttons import (
     CreateGameButton,
-    JoinToGameButton,
+    JoinTheGameButton,
     RulesButton,
     SettingsButton,
 )
@@ -19,7 +19,7 @@ __all__: list[str] = [
 
     "GameLogoWidget",
     "CreateGameButton",
-    "JoinToGameButton",
+    "JoinTheGameButton",
     "RulesButton",
     "SettingsButton",
     "AboutWidget",
