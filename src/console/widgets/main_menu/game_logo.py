@@ -1,4 +1,3 @@
-from textual.containers import Center
 from textual.widgets import Label
 
 LOGO_LABEL = """
@@ -11,6 +10,6 @@ LOGO_LABEL = """
 """
 
 
-class GameLogoWidget(Center):
-    def compose(self):
-        yield Label(LOGO_LABEL)
+class GameLogoWidget(Label):
+    def on_mount(self, event):
+        self.update(LOGO_LABEL)
