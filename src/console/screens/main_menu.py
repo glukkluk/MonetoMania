@@ -17,7 +17,7 @@ from widgets import (
 class Terminal(BaseTerminal):
     DEFAULT_CSS = """
     Terminal {
-
+        grid-rows: 2fr 1fr;
     }
     """
 
