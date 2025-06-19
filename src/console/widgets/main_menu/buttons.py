@@ -12,6 +12,7 @@ class BaseButton(Button):
 class CreateGameButton(BaseButton):
     def on_mount(self):
         self.label = "Create game"
+        self.id = "create-game-button"
 
 
 class JoinTheGameButton(BaseButton):
