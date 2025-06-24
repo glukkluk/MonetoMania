@@ -9,6 +9,9 @@ from .main_menu.buttons import (
 )
 from .main_menu.about import AboutWidget
 
+from .create_game.game_name import GameNameWidget
+from .create_game.entrance_fee import EntranceFeeWidget
+
 from .game_process.user_inventory import UserInventoryWidget
 from .game_process.sidebar import SidebarWidget
 from .game_process.game_screen import GameScreenWidget
@@ -23,6 +26,9 @@ __all__: list[str] = [
     "RulesButton",
     "SettingsButton",
     "AboutWidget",
+
+    "GameNameWidget",
+    "EntranceFeeWidget",
 
     "UserInventoryWidget",
     "SidebarWidget",

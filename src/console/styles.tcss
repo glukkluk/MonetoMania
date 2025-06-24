@@ -3,6 +3,22 @@ Screen {
     hatch: "#" white 15%;
 }
 
+EntranceFeeWidget {
+    padding: 1 0;
+
+    grid-size: 3 2;
+
+    grid-columns: 1fr 3fr 1fr;
+
+    height: auto;
+}
+
+.entrance-fee-label {
+    padding: 1 0;
+
+    column-span: 3;
+}
+
 SidebarWidget {
     border: solid purple;
 }
