@@ -4,13 +4,16 @@ Screen {
 }
 
 EntranceFeeWidget {
-    padding: 1 0;
+    padding: 0 0 1 0;
 
     grid-size: 3 2;
-
     grid-columns: 1fr 3fr 1fr;
 
     height: auto;
+}
+
+EntranceFeeWidget Input {
+    border: tall $foreground 10%;
 }
 
 .entrance-fee-label {
