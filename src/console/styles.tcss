@@ -19,6 +19,24 @@ EntranceFeeWidget {
     column-span: 3;
 }
 
+TurnDurationWidget Grid {
+    grid-size: 5;
+
+    height: auto;
+}
+
+TurnDurationWidget Grid Button {
+    margin: 0 1 0 0;
+}
+
+TurnDurationWidget Grid Button:last-of-type {
+    margin: 0;
+}
+
+.turn-duration-label {
+    padding: 0 0 1 0;
+}
+
 SidebarWidget {
     border: solid purple;
 }
