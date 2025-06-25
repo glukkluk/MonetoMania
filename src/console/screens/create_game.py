@@ -3,7 +3,13 @@ from textual.app import ComposeResult
 from textual.containers import Container
 from textual.widgets import Header, Footer
 
-from widgets import BaseTerminal, GameNameWidget, EntranceFeeWidget, TurnDurationWidget
+from widgets import (
+    BaseTerminal,
+    GameNameWidget,
+    EntranceFeeWidget,
+    TurnDurationWidget,
+    PasswordWidget,
+)
 
 
 class Terminal(BaseTerminal):
@@ -17,7 +23,6 @@ class StyleContainer(Container):
     DEFAULT_CSS = """
     StyleContainer {
         margin: 6 16;
-
     }
     """
 
@@ -32,3 +37,4 @@ class CreateGameScreen(Screen):
                 yield GameNameWidget()
                 yield EntranceFeeWidget()
                 yield TurnDurationWidget()
+                yield PasswordWidget()

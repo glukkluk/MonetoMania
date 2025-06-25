@@ -4,22 +4,35 @@ Screen {
 }
 
 EntranceFeeWidget {
-    padding: 0 0 1 0;
-
     grid-size: 3 2;
     grid-columns: 1fr 3fr 1fr;
 
     height: auto;
 }
 
-EntranceFeeWidget Input {
+GameNameWidget,
+EntranceFeeWidget Input,
+PasswordWidget Input,
+PasswordWidget Checkbox {
     border: tall $foreground 10%;
+}
+
+GameNameWidget:focus,
+EntranceFeeWidget Input:focus,
+PasswordWidget Input:focus,
+PasswordWidget Checkbox:focus {
+    border: tall $border;
+    background-tint: $foreground 5%;
 }
 
 .entrance-fee-label {
     padding: 1 0;
 
     column-span: 3;
+}
+
+TurnDurationWidget {
+    height: auto;
 }
 
 TurnDurationWidget Grid {
@@ -37,7 +50,19 @@ TurnDurationWidget Grid Button:last-of-type {
 }
 
 .turn-duration-label {
-    padding: 0 0 1 0;
+    padding: 1 0;
+}
+
+PasswordWidget {
+    grid-size: 2 2;
+    grid-columns: 1fr 8fr;
+
+    height: auto;
+}
+
+.password-label {
+    padding: 1 0 0 0;
+    column-span: 2;
 }
 
 SidebarWidget {
