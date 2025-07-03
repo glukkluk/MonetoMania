@@ -13,6 +13,7 @@ from .create_game.game_name import GameNameWidget
 from .create_game.entrance_fee import EntranceFeeWidget
 from .create_game.turn_duration import TurnDurationWidget
 from .create_game.password import PasswordWidget
+from .create_game.cancel_create_buttons import CancelButton, CreateButton
 
 from .game_process.user_inventory import UserInventoryWidget
 from .game_process.sidebar import SidebarWidget
@@ -33,6 +34,8 @@ __all__: list[str] = [
     "EntranceFeeWidget",
     "TurnDurationWidget",
     "PasswordWidget",
+    "CancelButton",
+    "CreateButton",
 
     "UserInventoryWidget",
     "SidebarWidget",

@@ -1,6 +1,6 @@
 from textual.screen import Screen
 from textual.app import ComposeResult
-from textual.containers import Container
+from textual.containers import Container, Center
 from textual.widgets import Header, Footer
 
 from widgets import (
@@ -9,6 +9,8 @@ from widgets import (
     EntranceFeeWidget,
     TurnDurationWidget,
     PasswordWidget,
+    CancelButton,
+    CreateButton,
 )
 
 
@@ -38,3 +40,5 @@ class CreateGameScreen(Screen):
                 yield EntranceFeeWidget()
                 yield TurnDurationWidget()
                 yield PasswordWidget()
+                yield Center(CancelButton())
+                yield Center(CreateButton())
