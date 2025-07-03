@@ -18,10 +18,12 @@ class EntranceFeeWidget(Grid):
 
             match event.button.id:
                 case "minus":
-                    if value != 100:
+                    if value > 100:
                         self.entrance_fee_input.value = str(value - 100)
 
                     else:
+                        self.entrance_fee_input.value = "100"
+
                         self.notify("The minimum entry fee is 100")
 
                 case "plus":
@@ -31,5 +33,15 @@ class EntranceFeeWidget(Grid):
             self.entrance_fee_input.value = "100"
 
     def on_input_changed(self, event: Input.Changed):
-        # The final entrance fee of the user who wrote in the input field or clicked on the “+”/“-” buttons
-        self.user_entrance_fee = event.value
+        try:
+            # The final entrance fee of the user who wrote in the input field or clicked on the “+”/“-” buttons
+            self.user_entrance_fee = int(event.value)
+
+        except ValueError:
+            self.user_entrance_fee = 100
+
+    def on_input_blurred(self, event: Input.Blurred):
+        if event.value == "" or int(event.value) < 100:
+            self.entrance_fee_input.value = "100"
+
+            self.notify("The minimum entry fee is 100")
