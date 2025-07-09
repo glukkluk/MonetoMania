@@ -4,10 +4,7 @@ from textual.widgets import Label, Button
 
 class TurnDurationWidget(Container):
     def compose(self):
-        yield Label(
-            "Select the duration of the player's turn",
-            classes="turn-duration-label",
-        )
+        yield Label("Select the duration of the player's turn", classes="widget-label")
 
         with Grid():
             yield Button("10")

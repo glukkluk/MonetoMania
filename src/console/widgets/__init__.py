@@ -9,11 +9,12 @@ from .main_menu.buttons import (
 )
 from .main_menu.about import AboutWidget
 
-from .create_game.game_name import GameNameWidget
+from .create_game.names import GameNameWidget, SearchUserNameWidget
 from .create_game.entrance_fee import EntranceFeeWidget
 from .create_game.turn_duration import TurnDurationWidget
 from .create_game.password import PasswordWidget
-from .create_game.cancel_create_buttons import CancelButton, CreateButton
+from .create_game.number_of_players import NumberOfPlayersWidget
+from .create_game.switch_buttons import BackButton, NextButton
 
 from .game_process.user_inventory import UserInventoryWidget
 from .game_process.sidebar import SidebarWidget
@@ -31,11 +32,13 @@ __all__: list[str] = [
     "AboutWidget",
 
     "GameNameWidget",
+    "SearchUserNameWidget",
     "EntranceFeeWidget",
     "TurnDurationWidget",
     "PasswordWidget",
-    "CancelButton",
-    "CreateButton",
+    "NumberOfPlayersWidget",
+    "BackButton",
+    "NextButton",
 
     "UserInventoryWidget",
     "SidebarWidget",

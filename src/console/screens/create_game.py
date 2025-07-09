@@ -6,11 +6,13 @@ from textual.widgets import Header, Footer
 from widgets import (
     BaseTerminal,
     GameNameWidget,
+    SearchUserNameWidget,
     EntranceFeeWidget,
     TurnDurationWidget,
     PasswordWidget,
-    CancelButton,
-    CreateButton,
+    NumberOfPlayersWidget,
+    BackButton,
+    NextButton,
 )
 
 
@@ -40,5 +42,21 @@ class CreateGameScreen(Screen):
                 yield EntranceFeeWidget()
                 yield TurnDurationWidget()
                 yield PasswordWidget()
-                yield Center(CancelButton())
-                yield Center(CreateButton())
+                yield Center(BackButton(label="Cancel"))
+                yield Center(NextButton(label="Next", next_screen="set-players-screen"))
+
+
+class SetPlayersScreen(Screen):
+    def compose(self):
+        with Terminal():
+            yield Header(show_clock=True)
+            yield Footer()
+
+            with StyleContainer():
+                yield SearchUserNameWidget()
+                yield NumberOfPlayersWidget()
+
+                yield Center(BackButton(label="Back"))
+                yield Center(
+                    NextButton(label="Create", next_screen="game-process-screen")
+                )
