@@ -16,13 +16,6 @@ from widgets import (
 )
 
 
-class Terminal(BaseTerminal):
-    DEFAULT_CSS = """
-    Terminal {
-    }
-    """
-
-
 class StyleContainer(Container):
     DEFAULT_CSS = """
     StyleContainer {
@@ -33,7 +26,7 @@ class StyleContainer(Container):
 
 class CreateGameScreen(Screen):
     def compose(self) -> ComposeResult:
-        with Terminal():
+        with BaseTerminal():
             yield Header(show_clock=True)
             yield Footer()
 
@@ -48,7 +41,7 @@ class CreateGameScreen(Screen):
 
 class SetPlayersScreen(Screen):
     def compose(self):
-        with Terminal():
+        with BaseTerminal():
             yield Header(show_clock=True)
             yield Footer()
 

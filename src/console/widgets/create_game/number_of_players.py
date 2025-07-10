@@ -4,7 +4,7 @@ from textual.widgets import Label, Button
 
 class NumberOfPlayersWidget(Container):
     def compose(self):
-        yield Label("Choose the number of players", classes="widget-label")
+        yield Label("Choose the number of players (default 2)", classes="widget-label")
 
         with Grid():
             yield Button("2")
