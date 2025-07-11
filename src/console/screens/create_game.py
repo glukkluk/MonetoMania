@@ -11,6 +11,7 @@ from widgets import (
     TurnDurationWidget,
     PasswordWidget,
     NumberOfPlayersWidget,
+    GeneralInfoWidget,
     BackButton,
     NextButton,
 )
@@ -51,5 +52,20 @@ class SetPlayersScreen(Screen):
 
                 yield Center(BackButton(label="Back"))
                 yield Center(
-                    NextButton(label="Create", next_screen="game-process-screen")
+                    NextButton(label="Create", next_screen="start-game-screen")
+                )
+
+
+class StartGameScreen(Screen):
+    def compose(self) -> ComposeResult:
+        with BaseTerminal():
+            yield Header(show_clock=True)
+            yield Footer()
+
+            with StyleContainer():
+                yield GeneralInfoWidget()
+
+                yield Center(BackButton(label="Back"))
+                yield Center(
+                    NextButton(label="Start", next_screen="game-process-screen")
                 )

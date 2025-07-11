@@ -6,6 +6,7 @@ from screens import (
     CreateGameScreen,
     SetPlayersScreen,
     GameProcessScreen,
+    StartGameScreen,
 )
 
 
@@ -18,5 +19,6 @@ class MonetoManiaApp(App):
         self.install_screen(CreateGameScreen(), name="create-game-screen")
         self.install_screen(SetPlayersScreen(), name="set-players-screen")
         self.install_screen(GameProcessScreen(), name="game-process-screen")
+        self.install_screen(StartGameScreen(), name="start-game-screen")
 
         self.push_screen("main-menu-screen")

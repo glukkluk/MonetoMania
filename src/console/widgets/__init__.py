@@ -14,6 +14,7 @@ from .create_game.entrance_fee import EntranceFeeWidget
 from .create_game.turn_duration import TurnDurationWidget
 from .create_game.password import PasswordWidget
 from .create_game.number_of_players import NumberOfPlayersWidget
+from .create_game.general_info import GeneralInfoWidget
 from .create_game.switch_buttons import BackButton, NextButton
 
 from .game_process.user_inventory import UserInventoryWidget
@@ -37,6 +38,7 @@ __all__: list[str] = [
     "TurnDurationWidget",
     "PasswordWidget",
     "NumberOfPlayersWidget",
+    "GeneralInfoWidget",
     "BackButton",
     "NextButton",
 

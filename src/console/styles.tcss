@@ -80,6 +80,10 @@ NumberOfPlayersWidget Grid Button:last-of-type {
     column-span: 2;
 }
 
+GeneralInfoWidget > Label {
+    margin: 0 0 1 0;
+}
+
 BackButton {
     margin: 3 0 1 0;
 }
